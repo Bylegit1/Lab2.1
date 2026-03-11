@@ -28,18 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            inputNumber = new TextBox();
+            TextTask = new Label();
+            bindingSource1 = new BindingSource(components);
+            buttonInput = new Button();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
+            // 
+            // inputNumber
+            // 
+            inputNumber.Location = new Point(21, 50);
+            inputNumber.Name = "inputNumber";
+            inputNumber.Size = new Size(125, 27);
+            inputNumber.TabIndex = 0;
+            // 
+            // TextTask
+            // 
+            TextTask.AutoSize = true;
+            TextTask.Location = new Point(21, 27);
+            TextTask.Name = "TextTask";
+            TextTask.Size = new Size(214, 20);
+            TextTask.TabIndex = 1;
+            TextTask.Text = "Введите шестизначное число";
+            // 
+            // buttonInput
+            // 
+            buttonInput.Location = new Point(21, 83);
+            buttonInput.Name = "buttonInput";
+            buttonInput.Size = new Size(94, 29);
+            buttonInput.TabIndex = 2;
+            buttonInput.Text = "Ввести число";
+            buttonInput.UseVisualStyleBackColor = true;
+            buttonInput.Click += buttonInput_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(818, 464);
+            ClientSize = new Size(270, 146);
+            Controls.Add(buttonInput);
+            Controls.Add(TextTask);
+            Controls.Add(inputNumber);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox inputNumber;
+        private Label TextTask;
+        private BindingSource bindingSource1;
+        private Button buttonInput;
     }
 }
