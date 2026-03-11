@@ -56,9 +56,9 @@
             // 
             ButtonInput.Location = new Point(21, 83);
             ButtonInput.Name = "ButtonInput";
-            ButtonInput.Size = new Size(94, 29);
+            ButtonInput.Size = new Size(249, 27);
             ButtonInput.TabIndex = 2;
-            ButtonInput.Text = "Ввести число";
+            ButtonInput.Text = "Проверить на счастливое число";
             ButtonInput.UseVisualStyleBackColor = true;
             ButtonInput.Click += ButtonInput_Click;
             // 
@@ -66,12 +66,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(270, 146);
+            ClientSize = new Size(303, 146);
             Controls.Add(ButtonInput);
             Controls.Add(TextTask);
             Controls.Add(InputNumber);
             Name = "Form1";
             Text = "Form1";
+            FormClosed += Form1_FormClosed;
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -26,9 +26,9 @@ namespace Lab2._1.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int number {
+        public string number {
             get {
-                return ((int)(this["number"]));
+                return ((string)(this["number"]));
             }
             set {
                 this["number"] = value;
