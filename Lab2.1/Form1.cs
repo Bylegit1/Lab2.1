@@ -5,15 +5,18 @@ namespace Lab2._1
         public Form1()
         {
             InitializeComponent();
+            InputNumber.Text = Properties.Settings.Default.number.ToString();
         }
 
-        private void buttonInput_Click(object sender, EventArgs e)
+        private void ButtonInput_Click(object sender, EventArgs e)
         {
             var number = 0;
+            Properties.Settings.Default.number = number;
+            Properties.Settings.Default.Save();
             try
             {
-                number = int.Parse(this.inputNumber.Text);
-                MessageBox.Show(LuckyNumberLogic.checkLuckyNumbersOutput(number));
+                number = int.Parse(this.InputNumber.Text);
+                MessageBox.Show(LuckyNumberLogic.CheckLuckyNumbersOutput(number));
             }
             catch(FormatException) {
                 return;
@@ -23,12 +26,12 @@ namespace Lab2._1
 
     public class LuckyNumberLogic
     {
-        public static bool isSixDigit(int number)
+        public static bool IsSixDigit(int number)
         {
             return number >= 100000 && number <= 999999;
         }
 
-        public static string checkLuckyNumber(int number)
+        public static string CheckLuckyNumber(int number)
         {
             var digit1 = number / 100000;
             var digit2 = (number / 10000) % 10;
@@ -50,16 +53,16 @@ namespace Lab2._1
             }
         }
 
-        public static string checkLuckyNumbersOutput(int number)
+        public static string CheckLuckyNumbersOutput(int number)
         {
             var result = "";
-            if (!LuckyNumberLogic.isSixDigit(number))
+            if (!LuckyNumberLogic.IsSixDigit(number))
             {
                 result = "Число не является шестизначным";
             }
             else
             {
-                result = LuckyNumberLogic.checkLuckyNumber(number);
+                result = LuckyNumberLogic.CheckLuckyNumber(number);
             }
             return result;
         }

@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            inputNumber = new TextBox();
+            InputNumber = new TextBox();
             TextTask = new Label();
             bindingSource1 = new BindingSource(components);
-            buttonInput = new Button();
+            ButtonInput = new Button();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
             // 
-            // inputNumber
+            // InputNumber
             // 
-            inputNumber.Location = new Point(21, 50);
-            inputNumber.Name = "inputNumber";
-            inputNumber.Size = new Size(125, 27);
-            inputNumber.TabIndex = 0;
+            InputNumber.Location = new Point(21, 50);
+            InputNumber.Name = "InputNumber";
+            InputNumber.Size = new Size(125, 27);
+            InputNumber.TabIndex = 0;
             // 
             // TextTask
             // 
@@ -52,24 +52,24 @@
             TextTask.TabIndex = 1;
             TextTask.Text = "Введите шестизначное число";
             // 
-            // buttonInput
+            // ButtonInput
             // 
-            buttonInput.Location = new Point(21, 83);
-            buttonInput.Name = "buttonInput";
-            buttonInput.Size = new Size(94, 29);
-            buttonInput.TabIndex = 2;
-            buttonInput.Text = "Ввести число";
-            buttonInput.UseVisualStyleBackColor = true;
-            buttonInput.Click += buttonInput_Click;
+            ButtonInput.Location = new Point(21, 83);
+            ButtonInput.Name = "ButtonInput";
+            ButtonInput.Size = new Size(94, 29);
+            ButtonInput.TabIndex = 2;
+            ButtonInput.Text = "Ввести число";
+            ButtonInput.UseVisualStyleBackColor = true;
+            ButtonInput.Click += ButtonInput_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(270, 146);
-            Controls.Add(buttonInput);
+            Controls.Add(ButtonInput);
             Controls.Add(TextTask);
-            Controls.Add(inputNumber);
+            Controls.Add(InputNumber);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
@@ -79,9 +79,9 @@
 
         #endregion
 
-        private TextBox inputNumber;
+        private TextBox InputNumber;
         private Label TextTask;
         private BindingSource bindingSource1;
-        private Button buttonInput;
+        private Button ButtonInput;
     }
 }
